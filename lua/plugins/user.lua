@@ -80,7 +80,7 @@ return {
   { "simrat39/rust-tools.nvim" },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = true },
 
   -- -- Move to specific position on screen fast
   -- ["phaazon/hop.nvim"] = {
