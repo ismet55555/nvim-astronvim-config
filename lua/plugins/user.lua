@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -23,24 +21,72 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "██      ███████ ████████ ███████      ██████   ██████  ██ ",
+        "██      ██         ██    ██          ██       ██    ██ ██ ",
+        "██      █████      ██    ███████     ██   ███ ██    ██ ██ ",
+        "██      ██         ██         ██     ██    ██ ██    ██    ",
+        "███████ ███████    ██    ███████      ██████   ██████  ██ ",
       }
       return opts
     end,
   },
 
+  {
+    "zbirenbaum/copilot.lua",
+    lazy = true,
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        debounce = 150,
+      },
+    },
+  },
+
+  -- Distraction free writing (Zen Mode)
+  {
+    "folke/zen-mode.nvim",
+    config = function() require("zen-mode").setup {} end,
+  },
+
+  -- Git Diff viewer
+  {
+    "sindrets/diffview.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    after = "plenary.nvim",
+    -- event = "Uer AstroritFile",
+    lazy = false,
+  },
+
+  -- Cheat.sh Code Snippets and Answers (Open with :Cheat)
+  { "RishabhRD/popfix" },
+  {
+    "RishabhRD/nvim-cheat.sh",
+    lazy = false,
+  },
+
+  -- Keyboard shortcuts for common VIM operations
+  { "tpope/vim-unimpaired" },
+
+  -- Find and replace locally or globally
+  { "windwp/nvim-spectre" },
+
+  -- Smart code folding
+  { "pseewald/vim-anyfold" },
+
+  -- Rust tools for rust language
+  { "simrat39/rust-tools.nvim" },
+
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
+
+  -- -- Move to specific position on screen fast
+  -- ["phaazon/hop.nvim"] = {
+  --   branch = "v2",
+  --   config = function() require("hop").setup { keys = "etovxqpdygfblzhckisuran" } end,
+  -- },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
