@@ -9,17 +9,17 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-         "ansiblels",
-         "bashls",
-         "docker_compose_language_service",
-         "dockerls",
-         "gopls",
-         "jsonls",
-         "pyright",
-         "sqlls",
-         "terraformls",
-         "yamlls",
-         "rust_analyzer",
+        "ansiblels",
+        "bashls",
+        "docker_compose_language_service",
+        "dockerls",
+        "gopls",
+        "jsonls",
+        "pyright",
+        "sqlls",
+        "terraformls",
+        "yamlls",
+        "rust_analyzer",
       })
     end,
   },
@@ -29,6 +29,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
+      -- FIXME: uses ruff and remove someo the things not needed
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "prettier",
         "stylua",
