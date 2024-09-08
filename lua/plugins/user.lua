@@ -77,7 +77,12 @@ return {
   { "pseewald/vim-anyfold" },
 
   -- Rust tools for rust language
-  { "simrat39/rust-tools.nvim" },
+  -- { "simrat39/rust-tools.nvim" },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = true },
