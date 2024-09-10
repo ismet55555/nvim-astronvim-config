@@ -91,8 +91,8 @@ return {
         ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
 
         -- Diffview for Git
-        ["<leader>do"] = { "<cmd>DiffviewOpen<CR>", desc = "Git DiffView open" },
-        ["<leader>dc"] = { "<cmd>DiffviewClose<CR>", desc = "Git DiffView close" },
+        ["<leader>go"] = { "<cmd>DiffviewOpen<CR>", desc = "Git DiffView open" },
+        ["<leader>gx"] = { "<cmd>DiffviewClose<CR>", desc = "Git DiffView close" },
 
         -- Cheat.sh
         ["<leader>ch"] = { "<cmd>Cheat<CR>", desc = "Open Cheat.sh input" },
