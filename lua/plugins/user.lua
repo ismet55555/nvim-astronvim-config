@@ -31,19 +31,19 @@ return {
     end,
   },
 
-  {
-    "zbirenbaum/copilot.lua",
-    lazy = true,
-    cmd = "Copilot",
-    event = "InsertEnter",
-    opts = {
-      suggestion = {
-        enabled = true,
-        auto_trigger = true,
-        debounce = 150,
-      },
-    },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   lazy = true,
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   opts = {
+  --     suggestion = {
+  --       enabled = true,
+  --       auto_trigger = true,
+  --       debounce = 150,
+  --     },
+  --   },
+  -- },
 
   -- Distraction free writing (Zen Mode)
   {
@@ -75,6 +75,13 @@ return {
 
   -- Smart code folding
   { "pseewald/vim-anyfold" },
+
+  --- MDX syntax highlighting
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
 
   -- Rust tools for rust language
   -- { "simrat39/rust-tools.nvim" },
