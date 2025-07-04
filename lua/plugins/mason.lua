@@ -29,19 +29,17 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
-      -- FIXME: use ruff and remove some the things not needed
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "ansible-lint",
         "beautysh",
-        "black",
         "cspell",
-        "isort",
         "jsonlint",
         "markdownlint",
         "mypy",
         "prettier",
         "pydocstyle",
-        "pylint",
+        "pyrefly",
+        "ruff",
         "shellcheck",
         "shellharden",
         "shfmt",
@@ -49,7 +47,6 @@ return {
         "tflint",
         "yamlfmt",
         "yamllint",
-        "yapf",
       })
     end,
   },
